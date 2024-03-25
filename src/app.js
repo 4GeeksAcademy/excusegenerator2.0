@@ -7,7 +7,7 @@ window.onload = () => {
     document.querySelector("#excuse").innerHTML = generateExcuse();
   });
 
-  console.log("Hello Rigo from the console!");
+  console.log("Excuses excuses and more excuses!");
 };
 
 let generateExcuse = () => {
