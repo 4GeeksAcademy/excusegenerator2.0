@@ -7,49 +7,44 @@ window.onload = () => {
     document.querySelector("#excuse").innerHTML = generateExcuse();
   });
 
-  console.log("Excuses excuses and more excuses!");
-};
+  let generateExcuse = () => {
+    let intro = [
+      "Sorry I cant come",
+      "Please forgive my absence",
+      "This is going to sound crazy but",
+      "I cant go because",
+      "Get this:",
+      "This is going to sound like an excuse but"
+    ];
+    let scapegoat = [
+      "the Pope",
+      "my ex",
+      "Kanye West",
+      "my Tinder date",
+      "my fish",
+      "the neighbors",
+      "a sexy plomber",
+      "my nextflix account"
+    ];
+    let delay = [
+      "just shit the bed",
+      "wont stop telling me knock knock jokes",
+      "is having a nervous breakdown",
+      "poured lemonade in my gas tank",
+      "is screaming my name",
+      "stole my will to live"
+    ];
 
-let generateExcuse = () => {
-  let who = ["A shark", "A thief", "My dog", "A cat", "A comedian", "A Karen"];
-  let what = [
-    " bit my ",
-    " ate my ",
-    " threw my ",
-    " hit my ",
-    " stole my ",
-    " crashed my ",
-    " broke my "
-  ];
-  let which = [
-    "car ",
-    "leg ",
-    "homework ",
-    "laptop ",
-    "spirit ",
-    "will to live "
-  ];
-  let when = [
-    "last night.",
-    "yesterday.",
-    "last week.",
-    "5 minutes ago.",
-    "last Friday.",
-    "just now."
-  ];
+    let introIndex = Math.floor(Math.random() * intro.length);
+    let scapegoatIndex = Math.floor(Math.random() * scapegoat.length);
+    let delayIndex = Math.floor(Math.random() * delay.length);
 
-  let whoIndex = Math.floor(Math.random() * who.length);
-  let whatIndex = Math.floor(Math.random() * what.length);
-  let whichIndex = Math.floor(Math.random() * which.length);
-  let whenIndex = Math.floor(Math.random() * when.length);
-
-  return (
-    who[whoIndex] +
-    "" +
-    what[whatIndex] +
-    "" +
-    which[whichIndex] +
-    "" +
-    when[whenIndex]
-  );
+    return (
+      intro[introIndex] +
+      " " +
+      scapegoat[scapegoatIndex] +
+      " " +
+      delay[delayIndex]
+    );
+  };
 };
